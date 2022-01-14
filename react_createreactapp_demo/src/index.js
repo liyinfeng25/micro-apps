@@ -9,6 +9,8 @@ import App from './App';
 // 配置路由命名空间，确保主应用能正确加载
 const BASE_NAME = window.__POWERED_BY_QIANKUN__ ? '/react_createreactapp_demo' : ''
 
+console.log('================================', )
+
 /**
  * 渲染函数
  * 两种情况：基座生命周期钩子中运行 / 子应用单独启动时运行

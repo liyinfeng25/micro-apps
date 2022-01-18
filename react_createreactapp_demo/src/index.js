@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
+import actions from './actions'
 // 文档描述：https://www.jianshu.com/p/9d75592edb9e
 // import reportWebVitals from './reportWebVitals';
 
@@ -16,6 +17,11 @@ console.log('================================', )
  * 两种情况：基座生命周期钩子中运行 / 子应用单独启动时运行
  */
 function render (props) {
+  console.log('react 子应用 ====>', props);
+  // 注入 actions 实例
+  if (props) {
+    actions.setActions(props);
+  }
   const { container } = props;
   ReactDOM.render(
     <React.StrictMode>
